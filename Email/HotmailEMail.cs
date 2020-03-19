@@ -9,13 +9,13 @@ namespace Email
 {
     public static class HotmailEMail
     {
-
+        // Test
         public static void SendEmail(/*string pageVisted*/)
         {
             SmtpClient SmtpServer = new SmtpClient("smtp.live.com");
             SmtpServer.Port = 587;
             SmtpServer.Credentials = new System.Net.NetworkCredential("nivag_17@hotmail.com", "2bDAMNEDsham69");
-            SmtpServer.EnableSsl = true;
+            SmtpServer.EnableSsl = false;
 
             try
             {
