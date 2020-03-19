@@ -10,12 +10,14 @@ namespace Email
     public static class HotmailEMail
     {
         // Test
-        public static void SendEmail(/*string pageVisted*/)
+        public static void SendEmail(string pageVisted)
         {
-            SmtpClient SmtpServer = new SmtpClient("smtp.live.com");
-            SmtpServer.Port = 587;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("nivag_17@hotmail.com", "2bDAMNEDsham69");
-            SmtpServer.EnableSsl = false;
+            SmtpClient SmtpServer = new SmtpClient("smtp.live.com")
+            {
+                Port = 587,
+                Credentials = new System.Net.NetworkCredential("nivag_17@hotmail.com", "2bDAMNEDsham69"),
+                EnableSsl = true
+            };
 
             try
             {
@@ -25,7 +27,7 @@ namespace Email
                 };
                 message.To.Add("nivag_17@hotmail.com");
                 message.Subject = "ISpy: Restricted WebSite has been visited.";
-                message.Body = DateTime.Now + $": Restricted Webpage #NAME GOES HERE# visted.";
+                message.Body = DateTime.Now + $": Restricted Webpage {pageVisted} visted.";
 
                 Send(message, SmtpServer);               
             }   
