@@ -11,7 +11,7 @@ namespace iSpy
             bool running = true;
             while(running)
             {
-                running = SetWindowTitle.GetActiveWindowOrPageTitle(1);
+                running = SetWindowTitle.GetActiveWindowOrPageTitle(5);
             }
 
             ClossApplication.Close();
