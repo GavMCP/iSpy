@@ -1,0 +1,6 @@
+C:\Users\gavinchallice\Source\repos\iSpy\Email\bin\Debug\Email.dll
+C:\Users\gavinchallice\Source\repos\iSpy\Email\bin\Debug\Email.pdb
+C:\Users\gavinchallice\Source\repos\iSpy\Email\obj\Debug\Email.csprojAssemblyReference.cache
+C:\Users\gavinchallice\Source\repos\iSpy\Email\obj\Debug\Email.dll
+C:\Users\gavinchallice\Source\repos\iSpy\Email\obj\Debug\Email.pdb
+C:\Users\gavinchallice\Source\repos\iSpy\Email\obj\Debug\Email.csproj.CoreCompileInputs.cache
