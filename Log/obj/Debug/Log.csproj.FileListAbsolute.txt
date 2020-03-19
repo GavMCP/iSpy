@@ -4,3 +4,4 @@ C:\Users\gavinchallice\Source\repos\iSpy\Log\bin\Debug\Log.pdb
 C:\Users\gavinchallice\Source\repos\iSpy\Log\obj\Debug\Log.dll
 C:\Users\gavinchallice\Source\repos\iSpy\Log\obj\Debug\Log.pdb
 C:\Users\gavinchallice\Source\repos\iSpy\Log\obj\Debug\Log.csprojAssemblyReference.cache
+C:\Users\gavinchallice\Source\repos\iSpy\Log\obj\Debug\Log.csproj.CoreCompileInputs.cache

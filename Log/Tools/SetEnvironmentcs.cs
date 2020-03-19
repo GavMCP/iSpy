@@ -1,22 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Security.AccessControl;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Log.Tools
 {
     public static class SetEnvironmentcs
     {
-        // TODO: 
-        // 1. Check the folder for access right. 
-        // 2. Have a list of possible locations to save the log to.
-        // 3. Try to create the log file folder and the text logfile.
-        // 4. Get the path location of where the log ends up being created.
-        
+                
         // List of True/False for each of the Directories checked for Write Access.
         public static List<bool> ListOfRules;
                 
@@ -37,12 +27,8 @@ namespace Log.Tools
             FileSaveLocations[3] = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
         
             // Files in save folders.
-        
-        
         }
-                    
-            
-                  
+                                   
         
         /// <summary>
         /// Check for Write permission for the user to ApplicationData and MyDocuments directories.
@@ -51,13 +37,10 @@ namespace Log.Tools
         public static bool CheckAllRules()
         {
             Dictionary<string, bool> testResults = new Dictionary<string, bool>();
-
-            //bool[] TestResults = new bool[2] { false, false};
+                       
             pCheckWriteMethod fPointerMyDocuments = new pCheckWriteMethod(CheckWritePermissionMyDocuments);
             pCheckWriteMethod fPointerApplicationData = new pCheckWriteMethod(CheckWritePermssionApplicationData);
-            //Console.WriteLine(FileSaveLocations[0]);
-            
-
+          
             // Check and set the access right foreach folder location. 
             if(fPointerMyDocuments())
             {
@@ -87,8 +70,7 @@ namespace Log.Tools
 #endif         
                     Settings1.Default.SavedLogLocation = check.Key + "\\NewLogFileTEST.txt";
                     Settings1.Default.Save();
-                    
-                    
+                                      
                     return true;
                 }
             }
